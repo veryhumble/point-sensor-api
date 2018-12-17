@@ -1,0 +1,13 @@
+[Unit]
+Description=Point Sensor API
+AssertPathExists=/opt/point
+
+[Service]
+ExecStart=/opt/point/point
+WorkingDirectory=/opt/point
+Restart=on-failure
+RestartSec=10
+startLimitIntervalSec=60
+
+[Install]
+WantedBy=multi-user.target
